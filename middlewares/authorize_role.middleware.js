@@ -1,14 +1,12 @@
-async function authorize_role(req, res, next) {
+export default async function authorize_role(req, res, next) {
   try {
-    //  alina look carefully i have to pass the role so that i could get the u-id next as well
     const user = req.user;
     const role = user.role;
     if (role === "admin") {
-      // i don't know if i'm doing right or not
       req.user = user;
-      return next();
+      next();
+      return;
     }
-
     return res.status(401).json({
       message: `Unauthorized to acess the resourse!`,
     });
@@ -19,3 +17,5 @@ async function authorize_role(req, res, next) {
     });
   }
 }
+
+

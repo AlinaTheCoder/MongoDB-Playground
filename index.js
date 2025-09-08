@@ -5,8 +5,9 @@ dotenv.config();
 const PORT = process.env.PORT ?? 3000;
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/auth.routes.js";
-import taskRoutes from './routes/task.routes.js'
+import taskRoutes from "./routes/task.routes.js";
 import logger from "./middlewares/logger_middleware.js";
+import adminRoutes from "./routes/admin.routes.js";
 connectDB();
 
 // middleware to parse JSON bodies
@@ -17,10 +18,9 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// authentication routes
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
-
+app.use("/api/admin", adminRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

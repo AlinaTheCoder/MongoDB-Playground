@@ -23,7 +23,7 @@ async function authMiddleware(req, res, next) {
     }
 
     try {
-      const decoded = jwt.verify(token, process.env.SECRET_KEY);
+      const decoded = jwt.verify(token, process.env.ACESS_TOKEN_SECRET_KEY);
       req.user = decoded;
       return next();
     } catch (error) {
