@@ -141,3 +141,10 @@ Docker support for deployment
 Developed with ❤️ by Alina Mukhtar
 
 https://github.com/AlinaTheCoder
+
+## 📬 API Testing
+
+A Postman collection is included for easy testing:  
+[Download Collection](./docs/TaskManager Api.postman_collection.json)
+
+🔗 [View Live API Docs (Postman)](https://documenter.getpostman.com/view/45948319/2sB3HnJKD1)
