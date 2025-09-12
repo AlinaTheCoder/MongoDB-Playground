@@ -1,0 +1,11 @@
+# Ignore node modules (EB will install dependencies automatically)
+node_modules
+
+# Git files
+.git
+.gitignore
+
+# Environment files (we'll set vars in EB console instead)
+.env
+
+

@@ -2,16 +2,15 @@
   "name": "Task-Manager-Api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.15.0",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.2",
